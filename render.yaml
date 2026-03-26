@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mechanicproof
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python start.py
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GOOGLE_PLACES_KEY
+        sync: false
